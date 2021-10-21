@@ -12,9 +12,6 @@ list_1year = [TKB1, SKB1, VTB1, SBER1]
 
 deposit = max(list_1year)
 
-
-
-
 print("Накопленные денежные средства за год в TKB:", TKB1)
 print("Накопленные денежные средства за год в SKB:", SKB1)
 print("Накопленные денежные средства за год в VTB:", VTB1)
