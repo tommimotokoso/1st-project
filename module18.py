@@ -1,3 +1,4 @@
+#функция сортировки списка пользователя
 def sort_insert(array):
     for i in range(1, len(array)):
         x = array[i]
@@ -8,7 +9,7 @@ def sort_insert(array):
         array[idx] = x
     return num_
 
-
+#функция алгоритма двоичного поиска элемента
 def binary_search(arr_in, elem_in, left, right):
     if left > right:
         return None
@@ -20,7 +21,7 @@ def binary_search(arr_in, elem_in, left, right):
     else:
         return binary_search(arr_in, elem_in, middle + 1, right)
 
-
+#функция корректности введенного элемента пользователем
 def int_verify(str_in):
     try:
         str_int = int(str_in)
@@ -29,20 +30,21 @@ def int_verify(str_in):
         print(f"Значение '{str_in}' невозможно преобразовать в целое число")
         return None
 
-
+#пользователь вводит массив (желательно из чисел)
 str_ = input("Введите целые числа через пробел: ").split()
 num_ = list(map(int_verify, str_))
 
 if not num_ or None in num_:
     print("Числа введены неверно!")
     exit()
-
+    
+#пользователь вводит число для проверки его места в массиве
 str_ = input("Введите целое число: ")
 cfr_ = int_verify(str_)
 if not cfr_:
     print("Число введено неверно!")
     exit()
-
+#выводим напечать отсортированный список
 sort_insert(num_)
 print("Отсортированный список по возрастанию элементов: ", num_)
 
